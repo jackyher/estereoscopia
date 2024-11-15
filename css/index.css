@@ -1,0 +1,174 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Aplicar Poppins a todo el cuerpo */
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-custom {
+    background-color: #103670;
+}
+
+.nav-title {
+    font-size: 1rem;
+    color: #fff;
+    margin-left: 8px;
+}
+
+.brand-with-image {
+    margin-left: 10px;
+}
+
+header {
+    margin-top: 90px;
+}
+
+.contenedor {
+    flex: 1;
+    margin: 0px 16px;
+    padding-bottom: 18px !important;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: #164386;
+    text-decoration-thickness: 3px;
+}
+
+.cont-images {
+    margin: 0px 35px;
+}
+
+.slider-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slider-images {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slider-images img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.img-anag {
+    height: 370px !important;
+    width: auto;
+}
+
+.slider-img {
+    width: 110px;
+    height: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 1s ease;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+h3 {
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: rotate(270deg);
+    transition: 1s ease;
+    z-index: 2;
+    font-weight: 600;
+}
+
+.details {
+    position: absolute;
+    bottom: -70px !important;
+    left: 20px !important;
+}
+
+h4 {
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 1s ease;
+    display: none;
+}
+
+p {
+    text-align: left;
+    color: #fff;
+    transition: 1s ease;
+    display: none;
+}
+
+.slider-img.active {
+    width: auto !important;
+    height: 300px !important;
+    transition: all 0.5s ease;
+}
+
+.slider-img.active img {
+    width: 100%;
+}
+
+.slider-img.active h3 {
+    display: none;
+}
+
+.slider-img.active .details {
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.slider-img.active .details h4, .slider-img.active .details p {
+    display: block;
+    font-size: 14px !important;
+}
+
+/* Cortina semitransparente negra para las imágenes no activas */
+.slider-img:not(.active)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo negro con opacidad */
+    border-radius: 10px;
+    z-index: 1; /* Asegura que esté encima de la imagen */
+}
+
+.contenedor2 {
+    margin: 20px 16px !important;
+    border-top: solid 1px rgb(209, 209, 209);
+}
+
+.title-cont {
+    padding-bottom: 20px;
+}
+
+footer {
+   text-align: center;
+   padding: 10px 0;
+   font-size: 0.85rem;
+   color: #000;
+}
